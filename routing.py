@@ -1,3 +1,16 @@
+from fastapi import APIRouter 
 
-def koko():
-	print("from koko")
+
+router = APIRouter()
+
+@router.get("/test", tags=["test"])
+async def koko():
+	return {"kekz": "main"}
+
+
+
+@router.get("/test/me", tags=["test"])
+async def koko2():
+	return {
+		"kekz2": """/test/me/  """
+	}
