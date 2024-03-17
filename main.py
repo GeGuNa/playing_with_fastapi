@@ -3,14 +3,19 @@
 
 import routing
 
+from fastapi import FastAPI
 
+app = FastAPI()
+
+
+@app.get("/")
 def aba():
-	print("test")
+	return {"test":"yep it's already done"}
 	
 	
 	
 	
-aba()
+#aba()
 
 #koko.koko()
 #routing.koko()
