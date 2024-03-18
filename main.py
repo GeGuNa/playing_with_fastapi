@@ -2,6 +2,9 @@
 #import routing as koko
 
 import routing
+import users as user
+
+
 
 from fastapi import FastAPI
 
@@ -9,6 +12,7 @@ app = FastAPI()
 
 
 app.include_router(routing.router)
+app.include_router(user.router)
 
 
 
